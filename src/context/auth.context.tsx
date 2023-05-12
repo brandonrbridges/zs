@@ -5,7 +5,10 @@ import { createContext, useReducer, useContext, useEffect } from 'react'
 
 type AuthState = {
   authenticated: boolean
-  user: any | null
+  user: {
+    accountNumber: string
+    credits: 1000000
+  } | null
   accessToken: string | null
 }
 

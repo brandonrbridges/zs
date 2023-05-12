@@ -68,7 +68,7 @@ export const PokerHand = ({
   return (
     <div className={classNames('w-fit')}>
       <div
-        className={classNames('w-fit px-4 pt-1 relative rounded-tl-md', {
+        className={classNames('w-fit px-4 py-1 relative text-sm rounded-tl-md', {
           'bg-sky-400 text-neutral-900': !selected,
           'bg-neutral-800/40 text-neutral-600': selected,
         })}

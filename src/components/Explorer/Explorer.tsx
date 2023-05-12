@@ -27,6 +27,21 @@ const Explorer = () => {
     document.addEventListener('mouseup', mouseUpHandler)
   }
 
+  if (!open) {
+    return (
+      <div className='flex flex-col items-center pt-4 w-10 border-r border-r-neutral-700'>
+        <button
+          type='button'
+          onClick={() => setOpen(true)}
+          className='text-neutral-500 hover:text-neutral-400 mb-4'
+        >
+          <VscChevronRight />
+        </button>
+        <p className='text-neutral-600 uppercase rotate-90 mt-6 text-sm'>Explorer</p>
+      </div>
+    )
+  }
+
   return (
     <div
       className='border-r bg-neutral-900 border-r-neutral-700 text-sm p-3 text-neutral-400  overflow-y-auto relative'

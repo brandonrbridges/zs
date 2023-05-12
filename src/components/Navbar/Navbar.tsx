@@ -31,7 +31,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className='border-y flex bg-neutral-900 border-neutral-700 w-full py-4 pr-4 pl-8 items-center justify-between'>
+    <div className='border-y flex bg-neutral-900 border-neutral-700 w-full p-4 items-center justify-between'>
       <ul className='flex space-x-4 text-neutral-500 items-center'>
         {pages.map((page) => (
           <li key={page.href}>
@@ -42,7 +42,6 @@ const Navbar = () => {
       <div className='flex space-x-4 text-neutral-500 items-center'>
         <VscSearch />
         <VscSettingsGear />
-        <VscAccount />
         <NavbarUser />
       </div>
     </div>
