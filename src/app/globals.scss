@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-900;
+}
+
+.tree-node-group--expanded > .tree-leaf-list-item > div[role='treeitem'] {
+  @apply relative;
+}
+
+.tree-node-group--expanded > .tree-leaf-list-item > div[role='treeitem']::before {
+  @apply bg-neutral-800 inset-y-0 -left-2 w-0.5 absolute;
+  content: '';
+}
+
+.card {
+  @apply cursor-pointer rounded-sm flex bg-neutral-500 h-9 w-6 pl-0.5 items-start justify-start relative text-neutral-950 transition-transform;
+
+  &:after {
+    @apply absolute -bottom-0.5 right-0 text-sm;
+  }
+
+  &:hover {
+    @apply scale-125;
+  }
+
+  &.clubs {
+    @apply bg-[#73CD9C];
+
+    &:after {
+      content: '♣';
+    }
+  }
+
+  &.diamonds {
+    @apply bg-[#4460B4];
+
+    &:after {
+      content: '♦';
+    }
+  }
+
+  &.hearts {
+    @apply bg-[#EF7F78];
+
+    &:after {
+      content: '♥';
+    }
+  }
+
+  &.spades {
+    @apply bg-[#5E5E5E];
+
+    &:after {
+      content: '♠';
+    }
+  }
+}

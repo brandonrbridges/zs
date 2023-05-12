@@ -7,12 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        bet: '#e89e7b',
+        check: '#8db48a',
+        fold: '#6a9dc2',
+      },
+      gridTemplateColumns: {
+        13: 'repeat(13, minmax(0, 1fr))',
+      },
+      gridTemplateRows: {
+        13: 'repeat(13, minmax(0, 1fr))',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
